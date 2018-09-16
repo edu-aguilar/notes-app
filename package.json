@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "a simple app to manage notes using nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edu-aguilar/notes-app.git"
+  },
+  "author": "Eduardo Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edu-aguilar/notes-app/issues"
+  },
+  "homepage": "https://github.com/edu-aguilar/notes-app#readme",
+  "dependencies": {
+    "yargs": "^12.0.2"
+  }
+}
