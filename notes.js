@@ -16,12 +16,12 @@ var saveNotes = (notes) => {
   fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 }
 
-var addNote = (title, note) => {
+var addNote = (title, body) => {
 
   var notes = fetchNotes();
   var note = {
     title,
-    note
+    body
   }
 
   var existsDuplicatedNote = notes.some(note => note.title === title);
@@ -29,8 +29,10 @@ var addNote = (title, note) => {
   if (!existsDuplicatedNote) {
     notes.push(note);
     saveNotes(notes);
+    return note;
   }
-  
+
+  return null;
 }
 
 var getAll = () => {
