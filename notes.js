@@ -45,6 +45,14 @@ var getNote = (title) => {
 
 var removeNote = (title) => {
 
+  var notes = fetchNotes();
+  var index = notes.findIndex(note => note.title === title);
+
+  if (index > -1) {
+    notes.splice(index, 1);
+    saveNotes(notes);
+    return true;
+  }
 }
 
 module.exports = {

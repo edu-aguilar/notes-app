@@ -14,5 +14,7 @@ if (command === 'add') {
     console.log(`note added properly: ${JSON.stringify(note)}`);
   }
 } else if (command === 'remove') {
-  console.log('remove note');
+  var isNoteRemoved = notes.removeNote(argv.title);
+  var result = isNoteRemoved ? 'Note was removed' : 'Note not found';
+  console.log(result);
 }
