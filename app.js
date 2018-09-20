@@ -2,8 +2,9 @@
 const fs = require('fs');
 const yargs = require('yargs');
 const notes = require('./notes');
+const yargsConfig = require('./yargsConfig');
 
-const argv = yargs.argv;
+const argv = yargsConfig.init(yargs).help().argv;
 var command = argv._[0];
 
 if (command === 'add') {
