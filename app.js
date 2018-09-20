@@ -17,8 +17,13 @@ if (command === 'add') {
   var isNoteRemoved = notes.removeNote(argv.title);
   var result = isNoteRemoved ? 'Note was removed' : 'Note not found';
   console.log(result);
-} else if (command = 'read') {
+} else if (command === 'read') {
   var note = notes.getNote(argv.title);
   var result = note ? `selected note: ${JSON.stringify(note)}` : 'Note not found';
   console.log(result);
+} else if (command === 'list') {
+  let allNotes = notes.getAll();
+  allNotes.forEach(note => {
+    console.log(`${note.title} - ${note.body}`);
+  });
 }
